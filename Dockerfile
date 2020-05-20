@@ -38,6 +38,8 @@ RUN chown ${NB_UID} /home/$NB_USER/environment.yml && \
 USER $NB_USER
 WORKDIR /home/$NB_USER
 RUN . /home/$NB_USER/miniconda3/etc/profile.d/conda.sh && \
+    conda update -n base -c defaults conda && \
+    conda activate notebook-env && \
     conda env update -q -n notebook-env --file /home/$NB_USER/environment.yml && \
     jupyter serverextension enable --sys-prefix jupyter_server_proxy && \
     conda clean -a -y && \
