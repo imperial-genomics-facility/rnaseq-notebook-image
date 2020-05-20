@@ -13,6 +13,11 @@ RUN apt-get -y update &&   \
       make \
       libgcc-5-dev \
       gfortran \
+      libncurses5-dev \
+      libbz2-1.0 \
+      libbz2-dev \
+      liblzma5  \
+      liblzma-dev \
       git  && \
     apt-get purge -y --auto-remove && \
     apt-get clean && \
@@ -33,8 +38,8 @@ RUN chown ${NB_UID} /home/$NB_USER/environment.yml && \
 USER $NB_USER
 WORKDIR /home/$NB_USER
 RUN . /home/$NB_USER/miniconda3/etc/profile.d/conda.sh && \
-    conda deactivate && \
     conda env update -q -n notebook-env --file /home/$NB_USER/environment.yml && \
+    jupyter serverextension enable --sys-prefix jupyter_server_proxy && \
     conda clean -a -y && \
     rm -rf /home/$NB_USER/.cache && \
     rm -rf /tmp/* && \
@@ -72,7 +77,9 @@ RUN mkdir -p /home/$NB_USER/bin && \
     tar -xzf 0.6.5.tar.gz && \
     mv TrimGalore-0.6.5 /home/$NB_USER/bin && \
     cd /home/$NB_USER/ && \
-    rm -rf /tmp/0.6.5.tar.gz
+    rm -rf /tmp/0.6.5.tar.gz && \
+    git clone https://github.com/igvteam/igv.js.git && \
+    cd igv.js;npm install;npm run build
 ENV PATH /home/$NB_USER/bin:${PATH}
 ENV PATH /home/$NB_USER/bin/samtools/bin/:${PATH}
 ENV PATH /home/$NB_USER/bin/FastQC/:${PATH}
