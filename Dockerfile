@@ -58,7 +58,7 @@ RUN mkdir -p /home/$NB_USER/bin && \
     cd /tmp && \
     unzip fastqc_v0.11.9.zip && \
     mv /tmp/FastQC /home/$NB_USER/bin && \
-    chmod a+x /home/$NB_USER/bin/FastQC/fastqc &&
+    chmod a+x /home/$NB_USER/bin/FastQC/fastqc && \
     cd /home/$NB_USER/ && \
     rm -rf /tmp/fastqc_v0.11.9.zip && \
     wget -O /tmp/2.7.3a.tar.gz https://github.com/alexdobin/STAR/archive/2.7.3a.tar.gz && \
