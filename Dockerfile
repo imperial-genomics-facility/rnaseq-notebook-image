@@ -22,6 +22,7 @@ RUN apt-get -y update &&   \
       git  && \
     curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
     apt-get install -y nodejs && \
+    npm install --global http-server && \
     apt-get purge -y --auto-remove && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -82,8 +83,7 @@ RUN mkdir -p /home/$NB_USER/bin && \
     tar -xzf 0.6.5.tar.gz && \
     mv TrimGalore-0.6.5 /home/$NB_USER/bin && \
     cd /home/$NB_USER/ && \
-    rm -rf /tmp/0.6.5.tar.gz && \
-    npm install http-server
+    rm -rf /tmp/0.6.5.tar.gz 
 ENV PATH /home/$NB_USER/bin:${PATH}
 ENV PATH /home/$NB_USER/bin/samtools/bin/:${PATH}
 ENV PATH /home/$NB_USER/bin/FastQC/:${PATH}
