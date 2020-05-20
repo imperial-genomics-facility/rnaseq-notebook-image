@@ -19,6 +19,8 @@ RUN apt-get -y update &&   \
       liblzma5  \
       liblzma-dev \
       git  && \
+    curl -sL https://deb.nodesource.com/setup_13.x | bash - && \
+    apt-get install -y nodejs && \
     apt-get purge -y --auto-remove && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -80,8 +82,7 @@ RUN mkdir -p /home/$NB_USER/bin && \
     mv TrimGalore-0.6.5 /home/$NB_USER/bin && \
     cd /home/$NB_USER/ && \
     rm -rf /tmp/0.6.5.tar.gz && \
-    git clone https://github.com/igvteam/igv.js.git && \
-    cd igv.js;npm install;npm run build
+    npm install http-server
 ENV PATH /home/$NB_USER/bin:${PATH}
 ENV PATH /home/$NB_USER/bin/samtools/bin/:${PATH}
 ENV PATH /home/$NB_USER/bin/FastQC/:${PATH}
