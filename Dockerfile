@@ -18,8 +18,9 @@ RUN apt-get -y update &&   \
       libbz2-dev \
       liblzma5  \
       liblzma-dev \
+      curl \
       git  && \
-    curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - && \
+    curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
     apt-get install -y nodejs && \
     apt-get purge -y --auto-remove && \
     apt-get clean && \
