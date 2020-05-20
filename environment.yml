@@ -8,7 +8,6 @@ dependencies:
  - conda-forge::r-rgl=0.100.30=r36ha687ee4_0
  - conda-forge::r-rcpp=1.0.3=r36h0357c0b_0
  - conda-forge::r-rngtools=1.4=r36h6115d3f_1
- - conda-forge::nodejs
  - r::r-stringi=1.4.3
  - conda-forge::r-devtools=2.2.1=r36h6115d3f_0
  - conda-forge::r-gam=1.16.1=r36h9bbef5b_2
