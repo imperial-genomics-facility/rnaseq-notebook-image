@@ -16,7 +16,9 @@ dependencies:
  - bioconda::bioconductor-deseq2
  - conda-forge::r-ggplot2
  - bioconda::bioconductor-rsubread
+ - bioconda::java-jdk=8
  - pip
  - pip:
    - rpy2==3.2.4
    - gprofiler-official==1.0.0
+   - jupyter_server_proxy
