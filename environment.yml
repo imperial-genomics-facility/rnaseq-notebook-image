@@ -17,6 +17,8 @@ dependencies:
  - conda-forge::r-ggplot2
  - bioconda::bioconductor-rsubread
  - bioconda::java-jdk=8
+ - bioconda::bioconductor-iranges
+ - conda-forge::r-gplots
  - pip
  - pip:
    - rpy2==3.2.4
