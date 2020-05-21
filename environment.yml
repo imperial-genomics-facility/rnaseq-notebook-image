@@ -22,3 +22,4 @@ dependencies:
    - rpy2==3.2.4
    - gprofiler-official==1.0.0
    - jupyter_server_proxy
+   - multiqc==1.8
