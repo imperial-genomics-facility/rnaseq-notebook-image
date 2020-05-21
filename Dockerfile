@@ -65,20 +65,20 @@ RUN mkdir -p /home/$NB_USER/bin && \
     make install && \
     cd /home/$NB_USER/ && \
     rm -rf /tmp/samtools-1.10 && \
-    wget -O /tmp/fastqc_v0.11.9.zip https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.9.zip && \
+    wget -q -O /tmp/fastqc_v0.11.9.zip https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.9.zip && \
     cd /tmp && \
     unzip fastqc_v0.11.9.zip && \
     mv /tmp/FastQC /home/$NB_USER/bin && \
     chmod a+x /home/$NB_USER/bin/FastQC/fastqc && \
     cd /home/$NB_USER/ && \
     rm -rf /tmp/fastqc_v0.11.9.zip && \
-    wget -O /tmp/2.7.3a.tar.gz https://github.com/alexdobin/STAR/archive/2.7.3a.tar.gz && \
+    wget -q -O /tmp/2.7.3a.tar.gz https://github.com/alexdobin/STAR/archive/2.7.3a.tar.gz && \
     cd /tmp && \
     tar -xzf 2.7.3a.tar.gz && \
     mv STAR-2.7.3a /home/$NB_USER/bin && \
     cd /home/$NB_USER/ && \
     rm -rf /tmp/2.7.3a.tar.gz && \
-    wget -O /tmp/0.6.5.tar.gz https://github.com/FelixKrueger/TrimGalore/archive/0.6.5.tar.gz && \
+    wget -q -O /tmp/0.6.5.tar.gz https://github.com/FelixKrueger/TrimGalore/archive/0.6.5.tar.gz && \
     cd /tmp && \
     tar -xzf 0.6.5.tar.gz && \
     mv TrimGalore-0.6.5 /home/$NB_USER/bin && \
