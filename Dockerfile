@@ -95,7 +95,9 @@ RUN mkdir -p /home/$NB_USER/bin && \
     tar -xzf 0.6.5.tar.gz && \
     mv TrimGalore-0.6.5 /home/$NB_USER/bin && \
     cd /home/$NB_USER/ && \
-    rm -rf /tmp/0.6.5.tar.gz 
+    rm -rf /tmp/0.6.5.tar.gz
+ENV LC_ALL C.UTF-8
+ENV LANG C.UTF-8
 ENV PATH /home/$NB_USER/bin:${PATH}
 ENV PATH /home/$NB_USER/bin/samtools/bin/:${PATH}
 ENV PATH /home/$NB_USER/bin/FastQC/:${PATH}
