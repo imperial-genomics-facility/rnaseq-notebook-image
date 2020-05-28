@@ -26,3 +26,4 @@ dependencies:
    - jupyter_server_proxy
    - multiqc==1.8
    - cutadapt
+   - "dask[complete]"
