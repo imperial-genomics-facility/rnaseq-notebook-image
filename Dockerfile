@@ -58,6 +58,9 @@ RUN . /home/$NB_USER/miniconda3/etc/profile.d/conda.sh && \
     conda activate notebook-env && \
     conda env update -q -n notebook-env --file /home/$NB_USER/environment.yml && \
     jupyter serverextension enable --sys-prefix jupyter_server_proxy && \
+    jupyter labextension install dask-labextension && \
+    jupyter labextension install @jupyter-widgets/jupyterlab-manager && \
+    jupyter labextension install @bokeh/jupyter_bokeh && \
     conda clean -a -y && \
     rm -rf /home/$NB_USER/.cache && \
     rm -rf /tmp/* && \
