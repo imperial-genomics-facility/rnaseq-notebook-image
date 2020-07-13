@@ -18,7 +18,13 @@ dependencies:
  - bioconda::bioconductor-rsubread
  - bioconda::java-jdk=8
  - bioconda::bioconductor-iranges
+ - bioconda::kallisto
  - conda-forge::r-gplots
+ - conda-forge::dask-labextension>=2.0.0
+ - conda-forge::snakeviz
+ - conda-forge::ipywidgets>=7.5
+ - conda-forge::python-graphviz
+ - conda-forge::bokeh>=2.0.0
  - pip
  - pip:
    - rpy2==3.2.4
@@ -27,3 +33,4 @@ dependencies:
    - multiqc==1.8
    - cutadapt
    - "dask[complete]"
+   
