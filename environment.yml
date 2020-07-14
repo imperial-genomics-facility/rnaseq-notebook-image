@@ -18,7 +18,7 @@ dependencies:
  - bioconda::bioconductor-rsubread
  - bioconda::java-jdk=8
  - bioconda::bioconductor-iranges
- - bioconda::kallisto
+ - bioconda::kallisto=0.46.1
  - conda-forge::r-gplots
  - conda-forge::dask-labextension>=2.0.0
  - conda-forge::snakeviz
