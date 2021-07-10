@@ -10,27 +10,21 @@ RUN apt-get -y update &&   \
     apt-get install --no-install-recommends -y \
       libfontconfig1 \
       libxrender1 \
-      libreadline6-dev \
-      libreadline6 \
+      libreadline-dev \
+      libreadline7 \
       libicu-dev \
       libc6-dev \
       icu-devtools \
       libjpeg-dev \
       libxext-dev \
       libcairo2 \
-      libicu55 \
+      libicu60 \
       libicu-dev \
       gcc \
       g++ \
       make \
       libgcc-5-dev \
       gfortran \
-      libncurses5-dev \
-      libbz2-1.0 \
-      libbz2-dev \
-      liblzma5  \
-      liblzma-dev \
-      curl \
       git  && \
     curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
     apt-get install -y nodejs && \
