@@ -1,36 +1,55 @@
 channels:
  - conda-forge
  - bioconda
- - r
 dependencies:
- - conda-forge::cmake=3.16.2=h28c56e5_1
- - conda-forge::r-essentials==3.6=r36_2001
- - conda-forge::r-rgl=0.100.30=r36ha687ee4_0
- - conda-forge::r-rcpp=1.0.3=r36h0357c0b_0
- - conda-forge::r-rngtools=1.4=r36h6115d3f_1
- - r::r-stringi=1.4.3
- - conda-forge::r-devtools=2.2.1=r36h6115d3f_0
- - conda-forge::r-gam=1.16.1=r36h9bbef5b_2
- - conda-forge::r-rcolorbrewer=1.1_2=r36h6115d3f_1002
- - conda-forge::r-biocmanager=1.30.10=r36h6115d3f_0
- - bioconda::bioconductor-deseq2
+ - conda-forge::cmake
+ - conda-forge::r-essentials
+ - conda-forge::r-rcpp
+ - conda-forge::r-devtools
+ - conda-forge::r-gam
+ - conda-forge::r-rcolorbrewer
+ - conda-forge::r-biocmanager
  - conda-forge::r-ggplot2
- - bioconda::bioconductor-rsubread
- - bioconda::java-jdk=8
- - bioconda::bioconductor-iranges
- - bioconda::kallisto=0.46.1
  - conda-forge::r-gplots
- - conda-forge::dask-labextension>=2.0.0
- - conda-forge::snakeviz
- - conda-forge::ipywidgets>=7.5
- - conda-forge::python-graphviz
- - conda-forge::bokeh>=2.0.0
+ - conda-forge::r-stringr
+ - conda-forge::r-tidyverse
+ - conda-forge::r-readr
+ - conda-forge::r-tibble
+ - conda-forge::r-rcolorbrewer
+ - conda-forge::r-glmpca
+ - conda-forge::r-dplyr
+ - conda-forge::r-cowplot
+ - conda-forge::r-dt
+ - conda-forge::r-lattice
+ - conda-forge::r-magrittr
+ - conda-forge::r-mass
+ - conda-forge::r-matrixstats
+ - conda-forge::r-poiclaclu
+ - conda-forge::r-farver
+ - conda-forge::r-matrix.utils
+ - conda-forge::r-forcats
+ - conda-forge::r-purrr
+ - bioconda::bioconductor-apeglm
+ - bioconda::bioconductor-s4vectors
+ - bioconda::bioconductor-biomart
+ - bioconda::bioconductor-deseq2
+ - bioconda::bioconductor-fgsea
+ - bioconda::bioconductor-rsubread
+ - bioconda::java-jdk
+ - bioconda::bioconductor-iranges
+ - bioconda::bioconductor-biobase
+ - bioconda::bioconductor-iranges
+ - bioconda::bioconductor-edger
+ - bioconda::bioconductor-biocparallel
+ - bioconda::bioconductor-genomicranges
+ - bioconda::bioconductor-limma
+ - bioconda::bioconductor-delayedarray
+ - bioconda::bioconductor-biocgenerics
+ - bioconda::bioconductor-tximport
+ - bioconda::bioconductor-summarizedexperiment
  - pip
  - pip:
-   - rpy2==3.2.4
-   - gprofiler-official==1.0.0
-   - jupyter_server_proxy
-   - multiqc==1.8
+   - multiqc==1.10
    - cutadapt
-   - "dask[complete]"
-   
+
+
