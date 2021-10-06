@@ -31,16 +31,18 @@ RUN apt-get -y update &&   \
       liblzma5  \
       liblzma-dev \
       curl \
+      npm
       git && \
     apt-get purge -y --auto-remove && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-RUN curl -kfsSL https://deb.nodesource.com/setup_16.x |bash - && \
-    apt-get install -y nodejs && \
-    npm install --global http-server && \
-    apt-get purge -y --auto-remove && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    npm install --global http-server
+#RUN curl -kfsSL https://deb.nodesource.com/setup_16.x |bash - && \
+#    apt-get install -y nodejs && \
+#    npm install --global http-server && \
+#    apt-get purge -y --auto-remove && \
+#    apt-get clean && \
+#    rm -rf /var/lib/apt/lists/*
 USER $NB_USER
 WORKDIR /home/$NB_USER
 ENV TMPDIR=/home/$NB_USER/.tmp
