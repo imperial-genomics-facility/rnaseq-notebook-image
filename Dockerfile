@@ -1,4 +1,4 @@
-FROM imperialgenomicsfacility/base-notebook-image:release-v0.0.7
+FROM imperialgenomicsfacility/base-notebook-image:release-v0.0.7.1
 LABEL maintainer="imperialgenomicsfacility"
 LABEL version="0.0.1"
 LABEL description="Docker image for running RNA-Seq analysis"
@@ -34,7 +34,8 @@ RUN apt-get -y update &&   \
       git && \
     apt-get purge -y --auto-remove && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    npm install --global http-server
 USER $NB_USER
 WORKDIR /home/$NB_USER
 ENV TMPDIR=/home/$NB_USER/.tmp
