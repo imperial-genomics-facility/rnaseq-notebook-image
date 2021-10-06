@@ -31,7 +31,7 @@ RUN apt-get -y update &&   \
       liblzma5  \
       liblzma-dev \
       curl \
-      npm
+      npm \
       git && \
     apt-get purge -y --auto-remove && \
     apt-get clean && \
