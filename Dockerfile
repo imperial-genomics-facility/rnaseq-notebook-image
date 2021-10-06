@@ -18,7 +18,7 @@ RUN apt-get -y update &&   \
       libjpeg-dev \
       libxext-dev \
       libcairo2 \
-      libicu55 \
+      libicu60 \
       libicu-dev \
       gcc \
       g++ \
