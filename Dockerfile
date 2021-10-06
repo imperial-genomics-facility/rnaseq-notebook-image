@@ -1,4 +1,4 @@
-FROM imperialgenomicsfacility/base-notebook-image:release-v0.0.3
+FROM imperialgenomicsfacility/base-notebook-image:release-v0.0.7
 LABEL maintainer="imperialgenomicsfacility"
 LABEL version="0.0.1"
 LABEL description="Docker image for running RNA-Seq analysis"
@@ -35,7 +35,7 @@ RUN apt-get -y update &&   \
     apt-get purge -y --auto-remove && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-RUN curl -kfsSL https://deb.nodesource.com/setup_12.x |bash - && \
+RUN curl -kfsSL https://deb.nodesource.com/setup_16.x |bash - && \
     apt-get install -y nodejs && \
     npm install --global http-server && \
     apt-get purge -y --auto-remove && \
