@@ -10,8 +10,8 @@ RUN apt-get -y update &&   \
     apt-get install --no-install-recommends -y \
       libfontconfig1 \
       libxrender1 \
-      libreadline6-dev \
-      libreadline6 \
+      libreadline-dev  \
+      libreadline7 \
       libicu-dev \
       libc6-dev \
       icu-devtools \
