@@ -16,14 +16,14 @@ dependencies:
  - bioconda::bioconductor-deseq2
  - conda-forge::r-ggplot2
  - bioconda::bioconductor-rsubread
- - bioconda::java-jdk=8
+ - bioconda::java-jdk
  - bioconda::bioconductor-iranges
  - conda-forge::r-gplots
- - conda-forge::dask-labextension>=2.0.0
+ - conda-forge::dask-labextension
  - conda-forge::snakeviz
- - conda-forge::ipywidgets>=7.5
+ - conda-forge::ipywidgets
  - conda-forge::python-graphviz
- - conda-forge::bokeh>=2.0.0
+ - conda-forge::bokeh
  - pip
  - pip:
    - rpy2
